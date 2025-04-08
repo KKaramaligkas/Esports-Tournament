@@ -1,6 +1,6 @@
 #include "ConsoleUtils.h"
 
-//Here we define the ConsoleUtils functions that help with console operations
+//To ConsoleUtils exei kapoies voithitikes functions gia to programma mas.
 
 void pauseConsole() {
     std::cin.clear();

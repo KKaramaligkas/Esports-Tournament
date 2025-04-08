@@ -29,7 +29,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="players.txt" />
+    <Text Include="contest_participants.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Participant.h">

@@ -1,6 +1,3 @@
-#include <iomanip>  // For setw()
-#include <cstdlib>  // For system()
-#include <limits>   // For clearing input buffer
 #include <iostream>
 #include "Participant.h"
 

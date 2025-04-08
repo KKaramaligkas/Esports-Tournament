@@ -4,6 +4,8 @@
 #include <iomanip>
 #include <set>
 
+// edw ginontai oles oi praxeis me tous participants. exw valei ta erwthmata me tis lyseis tous sthn seira
+
 ParticipantsList::ParticipantsList() : head(nullptr), isInitialized(false) {}
 ParticipantsList::~ParticipantsList() {
 	deleteAll();
@@ -65,7 +67,6 @@ void ParticipantsList::sortByRankingDescending() {
 
 		while (current->next != nullptr) {
 			if (current->ranking < current->next->ranking) {
-				// Swap values instead of pointers (simpler and allowed here)
 				std::swap(current->fullName, current->next->fullName);
 				std::swap(current->country, current->next->country);
 				std::swap(current->id, current->next->id);
@@ -93,7 +94,7 @@ bool ParticipantsList::deleteByID(int id) {
 	while (current != nullptr) {
 		if (current->id == id) {
 			if (prev == nullptr) {
-				// Deleting the first node
+				// Diagrafi tou prwtou node
 				head = current->next;
 			}
 			else {
@@ -178,7 +179,7 @@ void ParticipantsList::printParticipants() {
 			<< std::setw(20) << current->timestamp << "\n";
 		current = current->next;
 	}
-	pauseConsole();  // Wait before clearing
+	pauseConsole();
 }
 
 
@@ -189,7 +190,7 @@ void ParticipantsList::printByTimestamp() const {
 		return;
 	}
 
-	std::set<const Participant*> printed;  // Keep track of printed nodes
+	std::set<const Participant*> printed;  // H printed xrhsimopoieitai gia na kratame tous hdh ektypwmenous participants
 
 	std::cout << "\n" << YELLOW << std::setw(5) << "ID"
 		<< std::setw(20) << "Name"
